@@ -4,11 +4,10 @@ import { Image as ImageIcon, Heart, Clapperboard, Sparkles, ArrowRight } from 'l
 
 const Portfolio = () => {
   const items = [
-    { title: "Graduation", icon: <Sparkles className="w-6 h-6" />, img: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800", color: "bg-[#FFB5A7]" },
-    { title: "Wedding", icon: <Heart className="w-6 h-6" />, img: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=800", color: "bg-[#9BF6FF]" },
-    { title: "Casual", icon: <ImageIcon className="w-6 h-6" />, img: "https://images.unsplash.com/photo-1623091410901-00e2d268901f?q=80&w=800", color: "bg-[#CAFFBF]" },
-    { title: "Video", icon: <Clapperboard className="w-6 h-6" />, img: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=800", color: "bg-[#FDFFB6]" },
-    { title: "Pre-Wed", icon: <Heart className="w-6 h-6" />, img: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=800", color: "bg-[#FFC6FF]" },
+    { title: "Graduation", icon: <Sparkles className="w-6 h-6" />, img: "/asset_kukiwa/foto1.png", color: "bg-[#FFB5A7]" },
+    { title: "Wedding", icon: <Heart className="w-6 h-6" />, img: "/asset_kukiwa/foto2.png", color: "bg-[#9BF6FF]" },
+    { title: "Casual", icon: <ImageIcon className="w-6 h-6" />, img: "/asset_kukiwa/foto3.png", color: "bg-[#CAFFBF]" },
+    { title: "Pre-Wed", icon: <Heart className="w-6 h-6" />, img: "/asset_kukiwa/foto4.png", color: "bg-[#FFC6FF]" },
   ];
 
   return (

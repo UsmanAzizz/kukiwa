@@ -32,11 +32,11 @@ const Services = () => {
             </h2>
           </div>
           <p className="text-lg md:text-xl font-bold text-black/80">
-            Harga jelas, transparan, gak pake ribet.
+            Harga jelas, transparan <br /> gak pake ribet.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-16 gap-x-8 lg:gap-12 max-w-4xl mx-auto pt-4 md:pt-0">
           {packages.map((pkg, idx) => (
             <motion.div 
               initial={{ opacity: 0, y: 30 }}

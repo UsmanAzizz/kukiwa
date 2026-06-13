@@ -63,9 +63,13 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.95, rotate: 2 }}
             animate={{ opacity: 1, scale: 1, rotate: 1 }}
             transition={{ duration: 0.7, type: "spring", bounce: 0.4 }}
-            className="bg-white border-2 md:border-4 border-forest-dark rounded-2xl md:rounded-[2rem] overflow-hidden shadow-[6px_6px_0px_#1a6a1a] md:shadow-[10px_10px_0px_#1a6a1a] aspect-[4/5] relative z-10 hover:rotate-0 transition-transform duration-300"
+            className="group bg-white border-2 md:border-4 border-forest-dark rounded-2xl md:rounded-[2rem] overflow-hidden shadow-[6px_6px_0px_#1a6a1a] md:shadow-[10px_10px_0px_#1a6a1a] aspect-[4/5] relative z-10 hover:rotate-0 transition-transform duration-300"
           >
-            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=800" className="w-full h-full object-cover" alt="Kukiwa Vibe" />
+            <img 
+              src="/asset_kukiwa/owner.png" 
+              alt="Momen Bahagia" 
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
           </motion.div>
         </div>
 
