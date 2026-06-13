@@ -1,7 +1,7 @@
 import React from 'react';
 import { Camera } from 'lucide-react';
 
-const Navbar = () => {
+const Navbar = ({ onOpenBooking }) => {
   return (
     <nav className="fixed w-full z-50 p-3 md:p-4">
       <div className="max-w-7xl mx-auto bg-mint border-2 border-forest-dark rounded-xl md:rounded-2xl shadow-[2px_2px_0px_#1a6a1a] md:shadow-[4px_4px_0px_#1a6a1a] px-4 md:px-8 py-2 md:py-3 flex justify-between items-center transition-transform hover:-translate-y-0.5">
@@ -25,9 +25,12 @@ const Navbar = () => {
             <span className="absolute -bottom-1 left-0 w-full h-1 bg-forest-dark rounded-full scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
           </a>
         </div>
-        <a href="#contact" className="bg-white border-2 border-forest-dark rounded-lg md:rounded-xl px-4 py-1.5 md:px-5 md:py-2.5 font-bold text-xs md:text-sm text-forest-dark hover:-translate-y-1 hover:shadow-[2px_2px_0px_#1a6a1a] transition-all active:translate-y-0 active:shadow-none uppercase tracking-wide">
+        <button 
+          onClick={onOpenBooking} 
+          className="bg-white border-2 border-forest-dark rounded-lg md:rounded-xl px-4 py-1.5 md:px-5 md:py-2.5 font-bold text-xs md:text-sm text-forest-dark hover:-translate-y-1 hover:shadow-[2px_2px_0px_#1a6a1a] transition-all active:translate-y-0 active:shadow-none uppercase tracking-wide"
+        >
           Jadwalin
-        </a>
+        </button>
       </div>
     </nav>
   );

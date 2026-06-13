@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -9,16 +9,17 @@ import Booking from './components/Booking';
 import Footer from './components/Footer';
 
 function App() {
+  const [isBookingOpen, setIsBookingOpen] = useState(false);
+
   return (
     <AnimatePresence>
       <div className="min-h-screen bg-mint selection:bg-forest selection:text-mint font-sans overflow-x-hidden">
-        <Navbar />
+        <Navbar onOpenBooking={() => setIsBookingOpen(true)} />
         <main>
           <Hero />
           <Philosophy />
           <Portfolio />
           <Services />
-          <Booking />
         </main>
         <Footer />
         
@@ -40,6 +41,9 @@ function App() {
           </svg>
         </motion.a>
       </div>
+      
+      {/* Overlay Halaman Booking */}
+      <Booking isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
     </AnimatePresence>
   );
 }
