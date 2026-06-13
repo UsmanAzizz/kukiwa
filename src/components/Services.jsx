@@ -31,7 +31,7 @@ const Services = () => {
               Pilih Paketmu
             </h2>
           </div>
-          <p className="text-lg md:text-xl font-bold text-black/80">
+          <p className="text-lg md:text-xl font-bold text-black/80 text-center mx-auto">
             Harga jelas, transparan <br /> gak pake ribet.
           </p>
         </div>
