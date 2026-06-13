@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Camera } from 'lucide-react';
 
 const Philosophy = () => {
   return (
@@ -21,7 +22,8 @@ const Philosophy = () => {
           transition={{ type: "spring", delay: 0.1 }}
           className="text-4xl md:text-6xl font-black uppercase leading-[1.1] drop-shadow-[4px_4px_0px_#1a6a1a]"
         >
-          Santai Saja, <br className="hidden md:block"/> Kita Nangkap Momen Asli.
+          Santai Saja, <br className="hidden md:block"/> Kita Nangkap Momen Asli. 
+          <Camera className="inline-block w-10 h-10 md:w-14 md:h-14 ml-2 md:ml-4 text-[#FFD166] drop-shadow-[2px_2px_0px_#1a6a1a] align-text-bottom -mt-2" strokeWidth={3} />
         </motion.h2>
         
         <motion.div 

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <section id="home" className="pt-28 md:pt-40 pb-16 md:pb-20 bg-[#F5F5F0] min-h-screen flex items-center overflow-hidden">
+    <section id="home" className="pt-20 md:pt-32 pb-16 md:pb-20 bg-[#F5F5F0] min-h-screen flex items-center overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-8 items-center">
         
         {/* TEXT FIRST ON MOBILE */}
