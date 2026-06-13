@@ -1,5 +1,5 @@
 import React from 'react';
-import { Camera, Video, ArrowRight, Check, Lightbulb } from 'lucide-react';
+import { Camera, Video, ArrowRight, Check } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Services = () => {
@@ -23,13 +23,14 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-16 md:py-24 bg-[#F5F5F0] overflow-hidden">
+    <section id="services" className="py-16 md:py-24 bg-[#F5F5F0]">
       <div className="max-w-5xl mx-auto px-6 relative">
-        <div className="text-center mb-12 md:mb-16 flex flex-col items-center">
-          <h2 className="text-4xl md:text-6xl font-black text-black uppercase tracking-tight mb-4 flex items-center justify-center gap-3 md:gap-4">
-            <Lightbulb className="w-10 h-10 md:w-14 md:h-14 text-[#FFD166] drop-shadow-[2px_2px_0px_#000]" strokeWidth={3} />
-            Pilih Paketmu
-          </h2>
+        <div className="mb-12 md:mb-16 flex flex-col items-center">
+          <div className="bg-white border-4 border-black rounded-[2rem] px-8 py-4 shadow-[6px_6px_0px_#000] mb-6 transform -rotate-2 hover:rotate-0 transition-transform">
+            <h2 className="text-4xl md:text-6xl font-black text-black uppercase tracking-tight">
+              Pilih Paketmu
+            </h2>
+          </div>
           <p className="text-lg md:text-xl font-bold text-black/80">
             Harga jelas, transparan, gak pake ribet.
           </p>

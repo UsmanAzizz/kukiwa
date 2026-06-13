@@ -27,9 +27,9 @@ const Navbar = ({ onOpenBooking }) => {
         </div>
         <button 
           onClick={onOpenBooking} 
-          className="bg-white border-2 border-forest-dark rounded-lg md:rounded-xl px-4 py-1.5 md:px-5 md:py-2.5 font-bold text-xs md:text-sm text-forest-dark hover:-translate-y-1 hover:shadow-[2px_2px_0px_#1a6a1a] transition-all active:translate-y-0 active:shadow-none uppercase tracking-wide"
+          className="bg-[#FFD166] border-2 border-forest-dark rounded-lg md:rounded-xl px-4 py-1.5 md:px-5 md:py-2.5 font-black text-xs md:text-sm text-forest-dark hover:-translate-y-1 hover:shadow-[2px_2px_0px_#1a6a1a] transition-all active:translate-y-0 active:shadow-none uppercase tracking-widest shadow-[2px_2px_0px_#1a6a1a] hover:bg-[#FFC6FF]"
         >
-          Jadwalin
+          JADWALIN!
         </button>
       </div>
     </nav>

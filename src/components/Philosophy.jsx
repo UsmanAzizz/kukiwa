@@ -28,7 +28,7 @@ const Philosophy = () => {
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ type: "spring", delay: 0.2 }}
-          className="text-lg md:text-xl font-bold leading-relaxed space-y-4 text-mint/90 bg-forest-dark p-6 md:p-8 rounded-2xl border-4 border-black shadow-[8px_8px_0px_#000] transform rotate-1"
+          className="text-lg md:text-xl font-bold leading-relaxed space-y-4 text-mint/90 bg-forest-dark p-6 md:p-8 rounded-2xl border-4 border-black shadow-[8px_8px_0px_#000]"
         >
           <p>
             Gak ada yang namanya disuruh pose aneh-aneh sampai pegal. Kukiwa itu soal bikin kalian nyaman dan jadi diri sendiri.

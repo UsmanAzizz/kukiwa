@@ -37,7 +37,7 @@ const Booking = ({ isOpen, onClose }) => {
 
             <div className="max-w-5xl mx-auto w-full relative z-10 mt-8 md:mt-0">
               <div className="text-center mb-8 md:mb-12">
-                <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tight mb-4 drop-shadow-[4px_4px_0px_#1a6a1a]">
+                <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tight mb-4">
                   Booking Jadwal
                 </h2>
                 <p className="text-lg md:text-xl font-bold max-w-2xl mx-auto text-forest-dark/80">
