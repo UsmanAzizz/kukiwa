@@ -3,15 +3,15 @@ import { Mail, MessageCircle, Camera, Video } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer id="contact" className="bg-[#9BF6FF] text-black pt-24 pb-12 border-t-4 border-black">
+    <footer id="contact" className="bg-[#9BF6FF] text-black pt-16 md:pt-24 pb-12 border-t-4 border-black">
       <div className="max-w-6xl mx-auto px-6">
         
-        <div className="bg-white border-4 border-black rounded-[2rem] p-8 md:p-12 shadow-[12px_12px_0px_#000] text-center mb-20 transform -rotate-1 hover:rotate-0 transition-transform">
-          <h2 className="text-4xl md:text-6xl font-black uppercase mb-8 leading-tight">
+        <div className="bg-white border-4 border-black rounded-[2rem] p-6 md:p-12 shadow-[8px_8px_0px_#000] md:shadow-[12px_12px_0px_#000] text-center mb-16 md:mb-20 transform -rotate-1 hover:rotate-0 transition-transform">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-black uppercase mb-6 md:mb-8 leading-tight">
             Udah Siap Bikin <br/> Momen Epic?
           </h2>
-          <a href="https://wa.me/6281234567890" className="inline-flex items-center bg-[#FDFFB6] border-4 border-black px-8 py-4 rounded-2xl font-black text-xl md:text-2xl hover:bg-black hover:text-[#FDFFB6] transition-colors shadow-[6px_6px_0px_#000] hover:shadow-[0px_0px_0px_#000] hover:translate-y-1">
-            <MessageCircle className="mr-3 w-8 h-8" strokeWidth={3} /> Chat Sekarang
+          <a href="https://wa.me/6281234567890" className="inline-flex items-center bg-[#FDFFB6] border-4 border-black px-6 py-3 md:px-8 md:py-4 rounded-2xl font-black text-lg sm:text-xl md:text-2xl hover:bg-black hover:text-[#FDFFB6] transition-colors shadow-[4px_4px_0px_#000] md:shadow-[6px_6px_0px_#000] hover:shadow-[0px_0px_0px_#000] hover:translate-y-1">
+            <MessageCircle className="mr-2 md:mr-3 w-6 h-6 md:w-8 md:h-8" strokeWidth={3} /> Chat Sekarang
           </a>
         </div>
 

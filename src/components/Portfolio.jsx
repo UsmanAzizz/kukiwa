@@ -11,13 +11,13 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-24 bg-forest-dark text-white border-t-4 border-forest-dark">
+    <section id="portfolio" className="py-16 md:py-24 bg-forest-dark text-white border-t-4 border-forest-dark">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-black uppercase tracking-tight mb-4 text-mint drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tight mb-4 text-mint drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">
             Galeri Kece
           </h2>
-          <p className="text-xl font-bold max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl font-bold max-w-2xl mx-auto">
             Gak usah banyak teori, langsung cek aja hasil jepretan aslinya.
           </p>
         </div>

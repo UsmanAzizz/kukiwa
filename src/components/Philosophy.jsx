@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Philosophy = () => {
   return (
-    <section id="philosophy" className="py-24 bg-forest text-mint border-y-4 border-forest-dark overflow-hidden relative">
+    <section id="philosophy" className="py-16 md:py-24 bg-forest text-mint border-y-4 border-forest-dark overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
         
         <div className="order-2 lg:order-1 relative">
@@ -29,11 +29,11 @@ const Philosophy = () => {
             KENAPA KAMI BEDA?
           </div>
           
-          <h2 className="text-5xl md:text-6xl font-black uppercase leading-[1.1] drop-shadow-[4px_4px_0px_#1a6a1a]">
+          <h2 className="text-4xl md:text-6xl font-black uppercase leading-[1.1] drop-shadow-[4px_4px_0px_#1a6a1a]">
             Santai Saja, <br/> Kita Nangkap Momen Asli.
           </h2>
           
-          <div className="text-xl font-bold leading-relaxed space-y-4 text-mint/90 bg-forest-dark p-6 rounded-2xl border-4 border-black shadow-[6px_6px_0px_#000]">
+          <div className="text-lg md:text-xl font-bold leading-relaxed space-y-4 text-mint/90 bg-forest-dark p-5 md:p-6 rounded-2xl border-4 border-black shadow-[6px_6px_0px_#000]">
             <p>
               Gak ada yang namanya disuruh pose aneh-aneh sampai pegal. Kukiwa itu soal bikin kalian nyaman dan jadi diri sendiri.
             </p>

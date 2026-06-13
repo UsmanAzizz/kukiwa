@@ -30,7 +30,7 @@ function App() {
           href="https://wa.me/6281234567890" 
           target="_blank" 
           rel="noreferrer"
-          className="fixed bottom-8 right-8 bg-forest text-mint w-14 h-14 rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(34,139,34,0.4)] z-50 group"
+          className="fixed bottom-8 right-8 bg-forest text-mint border-2 md:border-4 border-forest-dark w-14 h-14 rounded-full flex items-center justify-center shadow-[4px_4px_0px_#1a6a1a] hover:translate-y-1 hover:shadow-none transition-all z-50 group"
           aria-label="Chat with us on WhatsApp"
         >
           <svg className="w-7 h-7 fill-current" viewBox="0 0 24 24">

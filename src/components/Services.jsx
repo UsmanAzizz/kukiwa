@@ -23,13 +23,13 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-24 bg-[#F5F5F0] overflow-hidden">
+    <section id="services" className="py-16 md:py-24 bg-[#F5F5F0] overflow-hidden">
       <div className="max-w-5xl mx-auto px-6 relative">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-black text-black uppercase tracking-tight mb-4">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-4xl md:text-6xl font-black text-black uppercase tracking-tight mb-4">
             Pilih Paketmu
           </h2>
-          <p className="text-xl font-bold text-black/80">
+          <p className="text-lg md:text-xl font-bold text-black/80">
             Harga jelas, transparan, gak pake ribet.
           </p>
         </div>
@@ -42,26 +42,29 @@ const Services = () => {
               viewport={{ once: true }}
               transition={{ delay: idx * 0.2 }}
               key={idx} 
-              className={`${pkg.color} border-4 border-black rounded-[2rem] p-8 shadow-[8px_8px_0px_#000] relative transform hover:-translate-y-2 transition-transform duration-300`}
+              className={`${pkg.color} text-slate-800 border-4 border-black rounded-[2rem] p-6 md:p-8 shadow-[8px_8px_0px_#000] relative transform hover:-translate-y-2 transition-transform duration-300`}
             >
-              <div className="bg-white border-4 border-black rounded-full w-20 h-20 flex items-center justify-center shadow-[4px_4px_0px_#000] absolute -top-10 right-8 transform rotate-6">
+              <div className="bg-white border-4 border-black rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center shadow-[4px_4px_0px_#000] absolute -top-8 md:-top-10 right-4 md:right-8 transform rotate-6">
                 {pkg.icon}
               </div>
               
-              <h3 className="text-4xl font-black uppercase text-black mt-4 mb-2">{pkg.title}</h3>
-              <div className="flex items-baseline gap-1 mb-6 border-b-4 border-black pb-6">
-                <span className="text-xl font-bold">Mulai dari IDR</span>
-                <span className="text-5xl font-black">{pkg.price}</span>
+              <h3 className="text-3xl md:text-4xl font-black uppercase mt-4 mb-2 tracking-tight">
+                <span className="text-black">{pkg.title.split(' ')[0]} </span>
+                <span className="text-white drop-shadow-[2px_2px_0px_#000]" style={{ WebkitTextStroke: '1px black' }}>{pkg.title.split(' ')[1]}</span>
+              </h3>
+              <div className="flex items-baseline gap-1 mb-6 border-b-4 border-black pb-4 md:pb-6 text-black">
+                <span className="text-base md:text-lg font-bold text-black/60">Mulai dari IDR</span>
+                <span className="text-4xl md:text-5xl font-black">{pkg.price}</span>
               </div>
               
-              <p className="text-lg font-bold text-black/80 mb-6 leading-snug">
+              <p className="text-base md:text-lg font-bold text-slate-700 mb-6 leading-snug">
                 {pkg.desc}
               </p>
               
-              <ul className="space-y-4 mb-10">
+              <ul className="space-y-4 mb-10 text-slate-800">
                 {pkg.features.map((feat, i) => (
                   <li key={i} className="flex items-center font-bold text-lg">
-                    <div className="bg-black text-white rounded-full p-1 mr-3">
+                    <div className="bg-white border-2 border-black text-black rounded-full p-1 mr-3 shadow-[2px_2px_0px_#000]">
                       <Check className="w-4 h-4" strokeWidth={4} />
                     </div>
                     {feat}
@@ -69,7 +72,7 @@ const Services = () => {
                 ))}
               </ul>
               
-              <button className="w-full bg-white border-4 border-black rounded-xl py-4 font-black text-xl flex items-center justify-center hover:bg-black hover:text-white transition-colors">
+              <button className="w-full bg-white border-4 border-black rounded-xl py-4 font-black text-xl flex items-center justify-center shadow-[6px_6px_0px_#000] hover:translate-y-1 hover:shadow-[2px_2px_0px_#000] hover:bg-black hover:text-white transition-all active:translate-y-2 active:shadow-none">
                 Gas Pilih Ini <ArrowRight className="ml-2 w-6 h-6" strokeWidth={3} />
               </button>
             </motion.div>
