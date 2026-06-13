@@ -1,93 +1,53 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Image as ImageIcon, Heart, Clapperboard, Sparkles } from 'lucide-react';
 
 const Portfolio = () => {
-  const images = [
-    { src: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=800", title: "Eternity" },
-    { src: "https://images.unsplash.com/photo-1525258946800-98ccdeacde9f?auto=format&fit=crop&q=80&w=800", title: "Harmoni" },
-    { src: "https://images.unsplash.com/photo-1623091410901-00e2d268901f?auto=format&fit=crop&q=80&w=800", title: "Momentum" },
-    { src: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=800", title: "Kehangatan" },
-    { src: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&q=80&w=800", title: "Ketulusan" },
-    { src: "https://images.unsplash.com/photo-1505932794465-147d1f1b2c97?auto=format&fit=crop&q=80&w=800", title: "Kenangan" }
+  const items = [
+    { title: "Graduation", icon: <Sparkles className="w-6 h-6" />, img: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800", color: "bg-[#FFB5A7]" },
+    { title: "Wedding", icon: <Heart className="w-6 h-6" />, img: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=800", color: "bg-[#9BF6FF]" },
+    { title: "Casual", icon: <ImageIcon className="w-6 h-6" />, img: "https://images.unsplash.com/photo-1623091410901-00e2d268901f?q=80&w=800", color: "bg-[#CAFFBF]" },
+    { title: "Video", icon: <Clapperboard className="w-6 h-6" />, img: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=800", color: "bg-[#FDFFB6]" }
   ];
 
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: { staggerChildren: 0.1 }
-    }
-  };
-
-  const item = {
-    hidden: { opacity: 0, scale: 0.95 },
-    show: { opacity: 1, scale: 1, transition: { duration: 0.8, ease: "easeOut" } }
-  };
-
   return (
-    <section id="portfolio" className="py-32 bg-mint">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-          className="text-center mb-20"
-        >
-          <span className="text-forest tracking-[0.2em] uppercase text-xs font-medium block mb-4">Galeri Kukiwa</span>
-          <h2 className="text-4xl md:text-5xl font-serif text-forest-dark mb-6">Jejak Karya Visual</h2>
-          <p className="text-forest-dark/70 max-w-2xl mx-auto font-light">
-            Kumpulan narasi visual yang diabadikan dengan kelembutan dan estetika tinggi.
+    <section id="portfolio" className="py-24 bg-forest-dark text-white border-t-4 border-forest-dark">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl md:text-6xl font-black uppercase tracking-tight mb-4 text-mint drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+            Galeri Kece
+          </h2>
+          <p className="text-xl font-bold max-w-2xl mx-auto">
+            Gak usah banyak teori, langsung cek aja hasil jepretan aslinya.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div 
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8"
-        >
-          {images.map((img, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {items.map((item, idx) => (
             <motion.div 
-              variants={item}
-              key={index} 
-              className="group relative aspect-[4/5] overflow-hidden rounded-sm bg-white cursor-pointer"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1, type: "spring" }}
+              key={idx} 
+              className="group cursor-pointer"
             >
-              <img 
-                src={img.src} 
-                alt={img.title} 
-                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 filter grayscale-[10%]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-forest-dark/80 via-forest-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
-                <motion.span 
-                  initial={{ y: 20, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.3 }}
-                  className="text-mint font-serif text-2xl tracking-wide transform translate-y-4 group-hover:translate-y-0 transition-all duration-500"
-                >
-                  {img.title}
-                </motion.span>
-                <span className="text-mint/70 text-xs tracking-widest uppercase mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                  Lihat Detail
-                </span>
+              <div className="bg-white border-4 border-black rounded-[2rem] overflow-hidden shadow-[6px_6px_0px_#F5FFFA] aspect-[3/4] relative mb-4 hover:-translate-y-2 transition-transform duration-300">
+                <img src={item.img} alt={item.title} className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" />
+                <div className={`absolute top-4 left-4 ${item.color} border-2 border-black rounded-full p-2 shadow-[2px_2px_0px_#000] text-black`}>
+                  {item.icon}
+                </div>
               </div>
+              <h3 className="text-2xl font-black uppercase text-center">{item.title}</h3>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
         
-        <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5, duration: 1 }}
-          className="mt-20 text-center"
-        >
-          <button className="relative overflow-hidden border border-forest-dark text-forest-dark px-10 py-4 rounded-full transition-all duration-300 group hover:text-mint">
-            <span className="relative z-10 tracking-widest text-xs uppercase font-medium">Lihat Arsip Lengkap</span>
-            <div className="absolute inset-0 bg-forest-dark w-0 group-hover:w-full transition-all duration-500 ease-out z-0"></div>
+        <div className="mt-16 flex justify-center">
+          <button className="bg-mint border-4 border-black rounded-2xl px-10 py-4 font-black text-black text-xl hover:-translate-y-1 hover:shadow-[8px_8px_0px_rgba(245,255,250,1)] transition-all active:translate-y-0 active:shadow-[2px_2px_0px_rgba(245,255,250,1)]">
+            Muat Lebih Banyak
           </button>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

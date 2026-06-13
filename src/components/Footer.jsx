@@ -1,75 +1,57 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { Mail, MessageCircle, Camera, Video } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer id="contact" className="bg-mint text-forest-dark pt-32 pb-10 border-t border-forest/10 overflow-hidden relative">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-gradient-to-b from-forest/5 to-transparent pointer-events-none rounded-b-full blur-3xl"></div>
-
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-        <motion.div 
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-          className="text-center mb-24"
-        >
-          <h2 className="text-5xl md:text-7xl font-serif text-forest-dark mb-8 leading-tight">
-            Mari Merangkai <br /> <span className="italic font-light">Cerita Bersama</span>
+    <footer id="contact" className="bg-[#9BF6FF] text-black pt-24 pb-12 border-t-4 border-black">
+      <div className="max-w-6xl mx-auto px-6">
+        
+        <div className="bg-white border-4 border-black rounded-[2rem] p-8 md:p-12 shadow-[12px_12px_0px_#000] text-center mb-20 transform -rotate-1 hover:rotate-0 transition-transform">
+          <h2 className="text-4xl md:text-6xl font-black uppercase mb-8 leading-tight">
+            Udah Siap Bikin <br/> Momen Epic?
           </h2>
-          <a href="mailto:hello@kukiwa.com" className="inline-block text-2xl md:text-3xl font-light hover:text-forest transition-colors border-b border-forest-dark pb-2">
-            hello@kukiwa.com
+          <a href="https://wa.me/6281234567890" className="inline-flex items-center bg-[#FDFFB6] border-4 border-black px-8 py-4 rounded-2xl font-black text-xl md:text-2xl hover:bg-black hover:text-[#FDFFB6] transition-colors shadow-[6px_6px_0px_#000] hover:shadow-[0px_0px_0px_#000] hover:translate-y-1">
+            <MessageCircle className="mr-3 w-8 h-8" strokeWidth={3} /> Chat Sekarang
           </a>
-        </motion.div>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-forest-dark/10 pt-16 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 border-t-4 border-black pt-12">
           
           <div className="col-span-1">
-            <h3 className="text-2xl font-serif font-bold text-forest-dark tracking-widest mb-6 uppercase">Kukiwa</h3>
-            <p className="text-forest-dark/60 max-w-sm text-sm leading-relaxed">
-              Studio visual berbasis di Indonesia. Melayani pembuatan karya fotografi dan sinematografi yang elegan, timeless, dan bermakna tinggi.
+            <h3 className="text-3xl font-black uppercase mb-4">KUKIWA</h3>
+            <p className="font-bold text-lg max-w-xs">
+              Studio visual asik yang bikin momen kamu terekam senatural mungkin.
             </p>
           </div>
 
           <div>
-            <h4 className="text-xs tracking-widest uppercase font-bold mb-6 text-forest">Navigasi</h4>
-            <ul className="space-y-4">
-              {['Beranda', 'Filosofi', 'Karya', 'Layanan'].map((item) => (
-                <li key={item}>
-                  <a href={`#${item.toLowerCase()}`} className="text-forest-dark/70 hover:text-forest transition-colors text-sm">
-                    {item}
-                  </a>
-                </li>
-              ))}
+            <h4 className="text-xl font-black uppercase mb-4 border-b-4 border-black inline-block pb-1">Menu Bebas</h4>
+            <ul className="space-y-3 font-bold text-lg">
+              <li><a href="#home" className="hover:underline decoration-4 underline-offset-4">Beranda</a></li>
+              <li><a href="#portfolio" className="hover:underline decoration-4 underline-offset-4">Karya Kece</a></li>
+              <li><a href="#services" className="hover:underline decoration-4 underline-offset-4">Harga Paket</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-xs tracking-widest uppercase font-bold mb-6 text-forest">Terhubung</h4>
-            <ul className="space-y-4">
-              <li>
-                <a href="https://wa.me/6281234567890" target="_blank" rel="noreferrer" className="text-forest-dark/70 hover:text-forest transition-colors text-sm block">
-                  WhatsApp (+62 812 3456 7890)
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-forest-dark/70 hover:text-forest transition-colors text-sm block">
-                  Instagram (@kukiwavisuals)
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-forest-dark/70 hover:text-forest transition-colors text-sm block">
-                  YouTube (Kukiwa)
-                </a>
-              </li>
-            </ul>
+            <h4 className="text-xl font-black uppercase mb-4 border-b-4 border-black inline-block pb-1">Kepo-in Kita</h4>
+            <div className="flex gap-4">
+              <a href="#" className="bg-white border-4 border-black p-3 rounded-xl shadow-[4px_4px_0px_#000] hover:-translate-y-1 hover:shadow-[6px_6px_0px_#000] transition-all">
+                <Camera className="w-6 h-6" strokeWidth={2.5} />
+              </a>
+              <a href="#" className="bg-white border-4 border-black p-3 rounded-xl shadow-[4px_4px_0px_#000] hover:-translate-y-1 hover:shadow-[6px_6px_0px_#000] transition-all">
+                <Video className="w-6 h-6" strokeWidth={2.5} />
+              </a>
+              <a href="mailto:hello@kukiwa.com" className="bg-white border-4 border-black p-3 rounded-xl shadow-[4px_4px_0px_#000] hover:-translate-y-1 hover:shadow-[6px_6px_0px_#000] transition-all">
+                <Mail className="w-6 h-6" strokeWidth={2.5} />
+              </a>
+            </div>
           </div>
 
         </div>
         
-        <div className="flex flex-col md:flex-row justify-between items-center text-xs text-forest-dark/40 uppercase tracking-widest">
-          <p>&copy; {new Date().getFullYear()} Kukiwa Visuals.</p>
-          <p className="mt-4 md:mt-0">Design with Elegance.</p>
+        <div className="mt-16 text-center font-black uppercase border-t-4 border-black pt-8">
+          <p>&copy; {new Date().getFullYear()} Kukiwa. All Rights Reserved Coy.</p>
         </div>
       </div>
     </footer>

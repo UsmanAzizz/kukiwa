@@ -1,121 +1,76 @@
 import React from 'react';
+import { Camera, Video, ArrowRight, Check } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Check } from 'lucide-react';
 
 const Services = () => {
   const packages = [
     {
-      name: "Momentum",
-      desc: "Sebuah perayaan pencapaian. Cocok untuk kelulusan atau perayaan personal.",
+      title: "Paket Potret",
       price: "500k",
-      features: [
-        "Sesi dokumentasi 2 jam",
-        "50+ karya visual terkurasi",
-        "Resolusi tinggi (Soft file)",
-        "Arahan gaya (Modest approach)"
-      ]
+      icon: <Camera className="w-10 h-10 text-black" strokeWidth={2.5} />,
+      color: "bg-[#9BF6FF]",
+      desc: "Cocok buat wisuda, prewed kasual, atau sekadar gaya-gayaan bareng bestie.",
+      features: ["Sesi seru maksimal 2 Jam", "50+ Foto diedit kece", "Semua file resolusi tinggi", "Gaya bebas tapi tetap sopan"]
     },
     {
-      name: "Eternity",
-      desc: "Penyatuan dua cerita. Dokumentasi hari bahagia yang elegan dan tak lekang waktu.",
-      price: "2.500k",
-      features: [
-        "2 Profesional Kukiwa",
-        "Sesi penuh (Hari H)",
-        "Album fisik premium eksklusif",
-        "Drive penyimpanan khusus",
-        "150+ karya visual retouched"
-      ],
-      highlight: true
-    },
-    {
-      name: "Cinematic",
-      desc: "Menangkap emosi bergerak menjadi sebuah film pendek yang puitis.",
+      title: "Paket Sinema",
       price: "1.500k",
-      features: [
-        "1 Videografer spesialis",
-        "Film pendek 1-3 menit",
-        "Dokumentasi arsip mentah",
-        "Format vertikal (Social Media)"
-      ]
+      icon: <Video className="w-10 h-10 text-black" strokeWidth={2.5} />,
+      color: "bg-[#FDFFB6]",
+      desc: "Bikin video cinematic pendek buat momen spesial kamu. Bisa untuk IG Reels/TikTok.",
+      features: ["1 Videografer asik", "Film pendek 1-3 Menit", "Bisa format vertikal", "Dapat semua file mentah"]
     }
   ];
 
-  const cardVariants = {
-    hidden: { opacity: 0, y: 50 },
-    show: (i) => ({
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, delay: i * 0.2, ease: [0.16, 1, 0.3, 1] }
-    })
-  };
-
   return (
-    <section id="services" className="py-32 bg-forest-dark relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=2070&auto=format&fit=crop')] opacity-5"></div>
-      
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-          className="text-center mb-20"
-        >
-          <span className="text-soft-gold tracking-[0.2em] uppercase text-xs font-medium block mb-4">Investasi Kenangan</span>
-          <h2 className="text-4xl md:text-5xl font-serif text-mint mb-6">Layanan Kukiwa</h2>
-          <p className="text-mint/60 max-w-2xl mx-auto font-light leading-relaxed">
-            Pilih paket yang paling merepresentasikan kebutuhan narasi visual Anda.
+    <section id="services" className="py-24 bg-[#F5F5F0] overflow-hidden">
+      <div className="max-w-5xl mx-auto px-6 relative">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl md:text-6xl font-black text-black uppercase tracking-tight mb-4">
+            Pilih Paketmu
+          </h2>
+          <p className="text-xl font-bold text-black/80">
+            Harga jelas, transparan, gak pake ribet.
           </p>
-        </motion.div>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           {packages.map((pkg, idx) => (
             <motion.div 
-              custom={idx}
-              variants={cardVariants}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, margin: "-50px" }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.2 }}
               key={idx} 
-              whileHover={{ y: -10 }}
-              className={`rounded-xl p-10 relative overflow-hidden transition-all duration-300 ${
-                pkg.highlight 
-                  ? 'bg-mint text-forest-dark shadow-[0_20px_50px_rgba(0,0,0,0.3)] scale-100 md:scale-105 z-10' 
-                  : 'bg-forest text-mint border border-mint/10 backdrop-blur-sm'
-              }`}
+              className={`${pkg.color} border-4 border-black rounded-[2rem] p-8 shadow-[8px_8px_0px_#000] relative transform hover:-translate-y-2 transition-transform duration-300`}
             >
-              {pkg.highlight && (
-                <div className="absolute top-0 right-0 bg-soft-gold text-forest-dark text-[10px] uppercase tracking-widest font-bold py-1 px-4 rounded-bl-xl">
-                  Rekomendasi
-                </div>
-              )}
-              
-              <h3 className="text-3xl font-serif mb-3">{pkg.name}</h3>
-              <p className={`mb-8 text-sm font-light leading-relaxed h-16 ${pkg.highlight ? 'text-forest-dark/70' : 'text-mint/60'}`}>{pkg.desc}</p>
-              
-              <div className="flex items-baseline mb-8 pb-8 border-b border-opacity-20 border-current">
-                <span className="text-sm mr-1">IDR</span>
-                <span className="text-4xl font-serif">{pkg.price}</span>
+              <div className="bg-white border-4 border-black rounded-full w-20 h-20 flex items-center justify-center shadow-[4px_4px_0px_#000] absolute -top-10 right-8 transform rotate-6">
+                {pkg.icon}
               </div>
               
-              <ul className="space-y-5 mb-10">
+              <h3 className="text-4xl font-black uppercase text-black mt-4 mb-2">{pkg.title}</h3>
+              <div className="flex items-baseline gap-1 mb-6 border-b-4 border-black pb-6">
+                <span className="text-xl font-bold">Mulai dari IDR</span>
+                <span className="text-5xl font-black">{pkg.price}</span>
+              </div>
+              
+              <p className="text-lg font-bold text-black/80 mb-6 leading-snug">
+                {pkg.desc}
+              </p>
+              
+              <ul className="space-y-4 mb-10">
                 {pkg.features.map((feat, i) => (
-                  <li key={i} className="flex items-start">
-                    <Check className={`w-4 h-4 mr-3 mt-0.5 shrink-0 ${pkg.highlight ? 'text-forest' : 'text-soft-gold'}`} />
-                    <span className="text-sm font-light leading-tight">{feat}</span>
+                  <li key={i} className="flex items-center font-bold text-lg">
+                    <div className="bg-black text-white rounded-full p-1 mr-3">
+                      <Check className="w-4 h-4" strokeWidth={4} />
+                    </div>
+                    {feat}
                   </li>
                 ))}
               </ul>
               
-              <button 
-                className={`w-full py-4 rounded-full font-medium tracking-wide text-sm transition-all duration-300 hover:shadow-lg ${
-                  pkg.highlight 
-                    ? 'bg-forest-dark text-mint hover:bg-forest' 
-                    : 'bg-mint/10 text-mint hover:bg-soft-gold hover:text-forest-dark'
-                }`}
-              >
-                Pilih {pkg.name}
+              <button className="w-full bg-white border-4 border-black rounded-xl py-4 font-black text-xl flex items-center justify-center hover:bg-black hover:text-white transition-colors">
+                Gas Pilih Ini <ArrowRight className="ml-2 w-6 h-6" strokeWidth={3} />
               </button>
             </motion.div>
           ))}

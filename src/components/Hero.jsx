@@ -1,78 +1,75 @@
 import React from 'react';
+import { Video, ArrowRight, Camera, Lightbulb, Clapperboard } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { ArrowDown } from 'lucide-react';
 
 const Hero = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2, delayChildren: 0.3 }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
-  };
-
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-mint">
-      {/* Abstract Background Elements */}
-      <div className="absolute inset-0 z-0">
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-          className="absolute inset-0 opacity-15"
-        >
-          <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069&auto=format&fit=crop" alt="Hero Background" className="w-full h-full object-cover" />
-        </motion.div>
-        <div className="absolute inset-0 bg-gradient-to-b from-mint/50 via-mint/80 to-mint"></div>
-      </div>
-      
-      <motion.div 
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        className="relative z-10 max-w-5xl mx-auto px-4 text-center mt-20"
-      >
-        <motion.span variants={itemVariants} className="text-forest tracking-[0.3em] uppercase text-xs mb-8 block font-medium">
-          Kukiwa Visuals &bull; Est. 2024
-        </motion.span>
+    <section id="home" className="pt-28 md:pt-40 pb-16 md:pb-20 bg-[#F5F5F0] min-h-screen flex items-center overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-8 items-center">
         
-        <motion.h1 variants={itemVariants} className="text-5xl md:text-8xl font-serif text-forest-dark mb-8 leading-[1.1] tracking-tight">
-          Mengabadikan Rasa,<br />
-          <span className="italic font-light text-forest">Merawat Waktu.</span>
-        </motion.h1>
-        
-        <motion.p variants={itemVariants} className="text-lg md:text-xl text-forest-dark/70 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
-          Menangkap ketulusan dan kehangatan dalam bingkai harmoni. Karena setiap detik adalah cerita yang layak dikenang selamanya.
-        </motion.p>
-        
-        <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center gap-6 items-center">
-          <a href="#portfolio" className="relative group overflow-hidden bg-forest-dark text-mint px-10 py-4 rounded-full transition-all duration-300">
-            <span className="relative z-10 tracking-widest text-xs uppercase font-medium">Jelajahi Karya</span>
-            <div className="absolute inset-0 bg-forest w-full scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 ease-out z-0"></div>
-          </a>
-        </motion.div>
-      </motion.div>
+        {/* TEXT FIRST ON MOBILE */}
+        <div className="order-1 flex flex-col items-start space-y-6 md:space-y-8 z-10 mt-4 md:mt-0">
+          <motion.div 
+            initial={{ opacity: 0, y: 10, rotate: -2 }}
+            animate={{ opacity: 1, y: 0, rotate: -1 }}
+            transition={{ duration: 0.5, type: "spring", stiffness: 200 }}
+            className="bg-white border-2 border-forest-dark rounded-full px-4 py-1.5 md:px-5 md:py-2 font-bold text-xs md:text-sm shadow-[2px_2px_0px_#1a6a1a] md:shadow-[4px_4px_0px_#1a6a1a] flex items-center gap-2"
+          >
+            <Video className="w-4 h-4 md:w-5 md:h-5 text-forest" strokeWidth={2.5} />
+            Fotografi & Sinema Kece
+          </motion.div>
+          
+          <motion.h1 
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-5xl sm:text-7xl md:text-8xl font-black text-forest-dark uppercase leading-[1.05] tracking-tight"
+          >
+            Nangkep <br />
+            <span className="text-white relative inline-block my-1 md:my-2">
+              <span className="absolute inset-0 bg-forest rounded-xl md:rounded-2xl transform rotate-1"></span>
+              <span className="relative z-10 px-3 md:px-4">Momen</span>
+            </span> <br />
+            Natural.
+          </motion.h1>
+          
+          <motion.p 
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-base md:text-lg font-bold text-forest-dark/80 max-w-sm md:max-w-md leading-relaxed"
+          >
+            Gak perlu kaku. Kami bikin momen bahagiamu tetap nyata, seru, dan pastinya sopan dilihat bareng keluarga.
+          </motion.p>
+          
+          <motion.div 
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto"
+          >
+            <a href="#portfolio" className="bg-forest border-2 border-forest-dark rounded-xl md:rounded-2xl px-6 py-3 md:px-8 md:py-4 font-bold text-mint text-base md:text-lg flex items-center justify-center hover:-translate-y-1 hover:shadow-[4px_4px_0px_#1a6a1a] md:hover:shadow-[6px_6px_0px_#1a6a1a] transition-all active:translate-y-0 active:shadow-none w-full sm:w-auto group">
+              Lihat Karya <ArrowRight className="ml-2 w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" strokeWidth={3} />
+            </a>
+            <a href="#contact" className="bg-white border-2 border-forest-dark rounded-xl md:rounded-2xl px-6 py-3 md:px-8 md:py-4 font-bold text-forest-dark text-base md:text-lg flex items-center justify-center hover:-translate-y-1 hover:shadow-[4px_4px_0px_#1a6a1a] md:hover:shadow-[6px_6px_0px_#1a6a1a] transition-all active:translate-y-0 active:shadow-none w-full sm:w-auto">
+              Tanya Harga
+            </a>
+          </motion.div>
+        </div>
 
-      {/* Scroll Indicator */}
-      <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center"
-      >
-        <span className="text-[10px] uppercase tracking-widest text-forest/50 mb-2">Scroll</span>
-        <motion.div 
-          animate={{ y: [0, 8, 0] }} 
-          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-        >
-          <ArrowDown className="w-4 h-4 text-forest/50" />
-        </motion.div>
-      </motion.div>
+        {/* SINGLE IMAGE SECOND ON MOBILE */}
+        <div className="order-2 relative w-full max-w-[280px] sm:max-w-md mx-auto lg:max-w-none mt-4 md:mt-0">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95, rotate: 2 }}
+            animate={{ opacity: 1, scale: 1, rotate: 1 }}
+            transition={{ duration: 0.7, type: "spring", bounce: 0.4 }}
+            className="bg-white border-2 md:border-4 border-forest-dark rounded-2xl md:rounded-[2rem] overflow-hidden shadow-[6px_6px_0px_#1a6a1a] md:shadow-[10px_10px_0px_#1a6a1a] aspect-[4/5] relative z-10 hover:rotate-0 transition-transform duration-300"
+          >
+            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=800" className="w-full h-full object-cover" alt="Kukiwa Vibe" />
+          </motion.div>
+        </div>
+
+      </div>
     </section>
   );
 };
